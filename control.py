@@ -20,7 +20,7 @@ display_duration = 1.0
 
 def flip_if_needed(landmarks):
     wrist = landmarks[0]
-    middle_mcp = landmarks[9]
+    middle_mcp = landmarks[5]
     if middle_mcp.y > wrist.y:
         base_y = wrist.y
         flipped = []
@@ -36,7 +36,6 @@ mp_draw = mp.solutions.drawing_utils
 model = joblib.load("model.pkl")
 
 in_vehicle = False  
-
 def perform_action(gesture):
     global in_vehicle
     keyboard.release('w')

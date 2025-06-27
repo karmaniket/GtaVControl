@@ -5,9 +5,9 @@ import time
 import math
 import numpy as np
 
-def flip_if_needed(landmarks):
+def flip_if_needed(landmarks):  # Check if the hand is flipped
     wrist = landmarks[0]
-    middle_mcp = landmarks[9]
+    middle_mcp = landmarks[5]
     if middle_mcp.y > wrist.y:
         base_y = wrist.y
         flipped = []
@@ -30,7 +30,7 @@ cap = cv2.VideoCapture(0)
 
 GESTURES = ["Left", "Right", "Fight", "Back", "Forward", "Jump", "Enter/Exit", "Stop"]
 gesture_index = 0
-samples_per_gesture = 300
+samples_per_gesture = 400
 delay_between_samples = 0.1 
 
 csv_file = "dataset.csv"
