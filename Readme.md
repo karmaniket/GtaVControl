@@ -68,7 +68,7 @@ python trainer.py
 ```
 - The trained model will be saved as `model.pkl`
 
-### 5. Control Script
+### 5. Control script
 
 - Run the main control script and make sure GTA V is running and focused
 - Perform gestures in front of your webcam
@@ -77,7 +77,7 @@ python trainer.py
 python control.py
 ```
 
-### 6. Gesture Mapping
+### 6. Gesture mapping
 
 ```bash
     Left        >   A       |   Move left
