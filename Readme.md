@@ -86,7 +86,7 @@ python control.py
     Back        >   S       |   Move backward
     Jump        >   SPACE   |   Jump
     Fight       >   L + M   |   Attack
-    Enter/Exit  >   F       |   Enter or exit vehicle
+    Enter/Exit  >   F       |   Enter/exit vehicle
     Stop        >   SPACE   |   Stop vehicle
 ```
 
