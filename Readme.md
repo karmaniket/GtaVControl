@@ -31,14 +31,14 @@ Control Grand Theft Auto V (GTA V) using a trained machine learning model and de
 > ***Set GTA V to windowed mode and lower the game resolution*** <br><br>
 > ![image](resolution.png)
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
     git clone https://github.com/karmaniket/GtaVControl.git
     cd GtaVControl
 ```
 
-### 2. Install dependencies
+### 2. Install Dependencies
 
 Requirements:
 
@@ -47,7 +47,7 @@ Requirements:
 pip install opencv-python mediapipe numpy scikit-learn pandas pynput joblib
 ```
 
-### 3. Record gestures
+### 3. Record Gestures
 
 - Press `SPACE` to start/stop collecting samples for each gesture, and `ESC` to exit
 - The dataset will be saved as `dataset.csv`
@@ -68,7 +68,7 @@ python trainer.py
 ```
 - The trained model will be saved as `model.pkl`
 
-### 5. Control script
+### 5. Control Script
 
 - Run the main control script and make sure GTA V is running and focused
 - Perform gestures in front of your webcam
@@ -77,7 +77,7 @@ python trainer.py
 python control.py
 ```
 
-### 6. Gesture mapping
+### 6. Gesture Mapping
 
 ```bash
     Left        >   A       |   Move left
