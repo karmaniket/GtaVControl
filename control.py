@@ -4,7 +4,6 @@ import time
 import cv2
 import mediapipe as mp
 import math
-import numpy as np 
 import joblib
 from collections import deque, Counter
 from pynput.keyboard import Key, Controller as KeyboardController
@@ -17,17 +16,6 @@ gesture_buffer = deque(maxlen=5)
 current_action = "Idle"
 last_update_time = 0
 display_duration = 1.0 
-
-def flip_if_needed(landmarks):
-    wrist = landmarks[0]
-    middle_mcp = landmarks[5]
-    if middle_mcp.y > wrist.y:
-        base_y = wrist.y
-        flipped = []
-        for lm in landmarks:
-            flipped.append(type(lm)(x=lm.x, y=base_y - (lm.y - base_y), z=lm.z))
-        return flipped
-    return landmarks
 
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(max_num_hands=1, model_complexity=0)
@@ -81,11 +69,6 @@ def perform_action(gesture):
             keyboard.press(Key.space)
 
 def get_hand_size(landmarks, width, height): # distance between wrist and index finger
-    x1, y1 = int(landmarks[0].x * width), int(landmarks[0].y * height)
-    x2, y2 = int(landmarks[8].x * width), int(landmarks[8].y * height)
-    return math.hypot(x2 - x1, y2 - y1)
-
-def get_depth_size(landmarks, width, height): 
     x1, y1 = int(landmarks[0].x * width), int(landmarks[0].y * height) # wrist
     x2, y2 = int(landmarks[8].x * width), int(landmarks[8].y * height) # index finger
     return math.hypot(x2 - x1, y2 - y1)
@@ -128,7 +111,7 @@ while True:
                     current_action = smoothed_gesture
                     last_update_time = time.time()
 
-                if get_depth_size(hand_landmarks.landmark, w, h) > 170: # Hand distance sensitivity for shift key
+                if get_hand_size(hand_landmarks.landmark, w, h) > 170: # Hand distance sensitivity for shift key
                     keyboard.press(Key.shift)
                 else:
                     keyboard.release(Key.shift)

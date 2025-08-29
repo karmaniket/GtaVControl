@@ -2,8 +2,6 @@ import cv2
 import mediapipe as mp
 import csv
 import time
-import math
-import numpy as np
 
 def flip_if_needed(landmarks):  # Check if the hand is flipped
     wrist = landmarks[0]
