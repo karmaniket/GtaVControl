@@ -27,6 +27,10 @@ Control Grand Theft Auto V (GTA V) using a trained machine learning model and de
 
 ## Setup and Installation
 
+> [!IMPORTANT]
+> ***Set GTA V to windowed mode and lower the game resolution*** <br><br>
+> ![image](resolution.png)
+
 ### 1. Clone the repository
 
 ```bash
@@ -72,10 +76,6 @@ python trainer.py
 ```sh
 python control.py
 ```
-
-> [!IMPORTANT]
-> Set GTA V to windowed mode and lower the game resolution
-> [](resolution.png)
 
 ### 6. Gesture Mapping
 
