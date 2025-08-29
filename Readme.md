@@ -44,7 +44,7 @@ Requirements:
 
 - Python 3.8+
 ```sh
-pip install opencv-python mediapipe numpy scikit-learn pandas pynput joblib
+    pip install opencv-python mediapipe numpy scikit-learn pandas pynput joblib
 ```
 
 ### 3. Record Gestures
@@ -53,7 +53,7 @@ pip install opencv-python mediapipe numpy scikit-learn pandas pynput joblib
 - The dataset will be saved as `dataset.csv`
 
 ```sh
-python record_gesture.py
+    python record_gesture.py
 ```
 
 >[!TIP]
@@ -64,7 +64,7 @@ python record_gesture.py
 Train a gesture classification model:
 
 ```sh
-python trainer.py
+    python trainer.py
 ```
 - The trained model will be saved as `model.pkl`
 
@@ -74,7 +74,7 @@ python trainer.py
 - Perform gestures in front of your webcam
 
 ```sh
-python control.py
+    python control.py
 ```
 
 ### 6. Gesture Mapping
