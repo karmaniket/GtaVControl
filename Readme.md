@@ -1,6 +1,6 @@
 <h1 align="center">GTA V Hand Gesture Control</h1>
 
-Control Grand Theft Auto V (GTA V) using a trained machine learning model and develop a real-time hand gesture recognition and control system. This project uses `OpenCV` and `MediaPipe` for hand tracking, `scikit-learn` for gesture classification, and `pynput` for keyboard/mouse emulation.
+Develop a real-time hand gesture recognition and control system, and control GTA V using a trained machine learning model. This project uses `OpenCV` and `MediaPipe` for hand tracking, `scikit-learn` for gesture classification, and `pynput` for keyboard/mouse emulation.
 
 ## *Click below for full tutorial*
 
