@@ -96,7 +96,7 @@ Train a gesture classification model:
 
 This project is licensed under the [MIT License](LICENSE).
 
-You are free to use, modify, and distribute this software, provided that you include the original copyright notice and this license in any copies or substantial portions of the software. This ensures that credit and attribution are always given to the original author.
+You are free to use, modify, and distribute, provided that you include the original copyright notice and this license in any copies or substantial portions of the program. This ensures that credit and attribution are always given to the original author.
 
 ## Acknowledgement
 
